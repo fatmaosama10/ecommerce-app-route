@@ -106,7 +106,7 @@ const Home = () => {
                 </path>
                 </svg>
                 </div>
-              {/* زر الإضافة إلى السلة مع اللودينج */}
+    
               <button 
                 onClick={() => AddToCart(product._id)} 
                 className="hover:bg-green-600 m-5 focus:ring-green-400 whitespace-nowrap w-full px-4 py-2 mx-auto font-semibold text-center text-white transition-all duration-500 bg-green-500 rounded-lg cursor-pointer flex justify-center items-center" 
