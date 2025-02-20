@@ -6,12 +6,11 @@ import './index.css'
 import"@fortawesome/fontawesome-free/css/all.min.css"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// أنشئ كائن QueryClient
+
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    {/* ضع التطبيق داخل المزود */}
     <QueryClientProvider client={queryClient}>
       <App />
     </QueryClientProvider>
