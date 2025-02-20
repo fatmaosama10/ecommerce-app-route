@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Slider from "react-slick";
-import { useContext, useState } from "react"; // ✅ Added useState
+import { useContext, useState } from "react"; 
 import { CartContext } from "../CartContext/CartContext";
 import toast from "react-hot-toast";
 
@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const { id } = useParams();
   
   const { addProductToCart } = useContext(CartContext);
-  const [loading, setLoading] = useState(false); // ✅ Fixed variable name
+  const [loading, setLoading] = useState(false); 
 
   async function AddToCart() {
     setLoading(true);
@@ -82,7 +82,7 @@ const ProductDetails = () => {
             Colour: {data.color || "Multicolour"} <br />
             Department: {data.department || "Women"}
           </p>
-          <h4 className="mb-4 text-lg font-medium text-green-500">{data.category?.name || "Unknown"}</h4> {/* ✅ Fixed */}
+          <h4 className="mb-4 text-lg font-medium text-green-500">{data.category?.name || "Unknown"}</h4> 
           <div className="flex items-center justify-around mb-8">
             <h4 className="text-lg font-semibold">
               {data.priceAfterDiscount ? (
