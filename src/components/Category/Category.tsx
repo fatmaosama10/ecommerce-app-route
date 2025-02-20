@@ -16,7 +16,7 @@ const Home = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // ✅ تفعيل AOS عند تحميل الصفحة
+    AOS.init({ duration: 1000, once: true }); 
   }, []);
 
   async function AddToCart(id) {
