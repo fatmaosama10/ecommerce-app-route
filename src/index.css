@@ -22,7 +22,6 @@
     
     .loading-icon {
         font-size: 100px;
-        /* زودت الحجم شوية */
         color: #4fa94d;
         animation: glow 1.5s infinite ease-in-out;
     }
