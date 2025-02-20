@@ -21,7 +21,7 @@ const Navbar = () => {
      
       <nav className="bg-gray-100 shadow-lg p-4 fixed w-full top-0 left-0 z-50">
         <div className="container mx-auto flex flex-wrap items-center justify-between">
-          {/* Left Section: Logo */}
+       
           <div className="flex items-center space-x-6">
             <NavLink to="/">
               <img src={logo} alt="Logo" className="w-32 mx-7" />
