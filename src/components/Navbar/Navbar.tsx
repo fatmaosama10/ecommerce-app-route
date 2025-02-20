@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar */}
+     
       <nav className="bg-gray-100 shadow-lg p-4 fixed w-full top-0 left-0 z-50">
         <div className="container mx-auto flex flex-wrap items-center justify-between">
           {/* Left Section: Logo */}
@@ -28,7 +28,7 @@ const Navbar = () => {
             </NavLink>
           </div>
 
-          {/* Navigation Links - Large Screens */}
+        
           <ul className="hidden md:flex flex-grow space-x-6 text-gray-700 text-lg">
             <li>
               <NavLink
@@ -72,7 +72,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Mobile Icons & Menu Button */}
+        
           <div className="flex items-center space-x-4 md:hidden">
             <NavLink to="/wishlist" className="text-green-500 text-2xl">
               <i className="fa-regular fa-heart"></i>
@@ -93,7 +93,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* User Actions - Large Screens */}
+         
           <div className="hidden md:flex md:items-center md:space-x-6">
             {token ? (
               <>
@@ -127,7 +127,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu (Side Drawer) */}
+   
       <div
         className={`fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -149,7 +149,7 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Menu List */}
+       
         <ul className="flex flex-col items-start mt-16 space-y-6 px-6 text-lg font-medium text-gray-700">
           <li>
             <NavLink to="/" className="block w-full py-2 hover:bg-gray-100 rounded-md" onClick={() => setIsOpen(false)}>
@@ -174,7 +174,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* إضافة margin-top لتجنب مشكلة المسافة الكبيرة */}
+
       <main className="pt-16">
         {/* محتوى الصفحة سيظهر هنا */}
       </main>
