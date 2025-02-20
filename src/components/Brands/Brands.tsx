@@ -16,7 +16,7 @@ const Home = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // ✅ تهيئة AOS مع التأثير لمرة واحدة
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   async function AddToCart(id) {
@@ -51,7 +51,7 @@ const Home = () => {
               className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer"
               onClick={() => setSelectedProduct(product)}
               data-aos="fade-up"
-              data-aos-delay={index * 100} // ✅ تأخير بسيط لكل عنصر
+              data-aos-delay={index * 100}
             >
               <div className="w-full h-56 flex justify-center items-center rounded-lg overflow-hidden">
                 <img src={product.image} className="w-full h-full object-cover" alt={product.name} />
@@ -62,7 +62,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* ✅ نافذة التفاصيل مع تأثير AOS */}
       {selectedProduct && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
