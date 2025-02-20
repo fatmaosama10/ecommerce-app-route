@@ -8,14 +8,14 @@ function Cart() {
   const totalPrice = Products?.reduce((acc, item) => acc + item.price * item.count, 0) || 0;
 
   const incrementProductCount = (productId) => {
-    addProductToCart(productId); // Increment the product count
+    addProductToCart(productId); 
   };
 
   const decrementProductCount = (productId) => {
     const product = Products.find(item => item.product.id === productId);
     if (product && product.count > 1) {
-      removeProductFromCart(productId); // Remove the product to keep the count logic consistent
-      addProductToCart(productId); // Add it back to decrease count
+      removeProductFromCart(productId); 
+      addProductToCart(productId); 
     }
   };
 
