@@ -15,7 +15,7 @@ import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import CartContextProvider from "./components/CartContext/CartContext";
-
+ 
 import Payment from "./components/Payment/Payment";
 
 const router = createBrowserRouter([
