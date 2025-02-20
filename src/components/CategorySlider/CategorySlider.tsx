@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 const CategorySlider = () => {
     const [slidesToShow, setSlidesToShow] = useState(7);
 
-    // تحديث عدد الصور المعروضة بناءً على حجم الشاشة
     useEffect(() => {
         const updateSlidesToShow = () => {
             if (window.innerWidth < 480) {
@@ -20,13 +19,12 @@ const CategorySlider = () => {
             }
         };
 
-        updateSlidesToShow(); // استدعاء عند التحميل
-        window.addEventListener("resize", updateSlidesToShow); // تحديث عند تغيير حجم الشاشة
+        updateSlidesToShow(); 
+        window.addEventListener("resize", updateSlidesToShow); 
 
         return () => window.removeEventListener("resize", updateSlidesToShow);
     }, []);
 
-    // دالة جلب البيانات مع التعامل مع الأخطاء
     async function getAllCategory() {
         try {
             const response = await axios.get("https://ecommerce.routemisr.com/api/v1/categories");
@@ -37,7 +35,7 @@ const CategorySlider = () => {
         }
     }
 
-    // استدعاء API باستخدام React Query
+   
     const { data, error, isLoading } = useQuery({
         queryKey: ["categories"],
         queryFn: getAllCategory,
@@ -58,13 +56,12 @@ const CategorySlider = () => {
         <section className="w-[90%] max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
             <h2 className="mb-8 text-3xl font-medium text-gray-500">Featured Categories</h2>
 
-            {/* عرض رسالة أثناء التحميل */}
             {isLoading && <p className="text-center text-gray-500">Loading categories...</p>}
 
-            {/* عرض رسالة خطأ في حال فشل الجلب */}
+          
             {error && <p className="text-center text-red-500">Failed to load categories</p>}
 
-            {/* عرض السلايدر فقط عند توفر البيانات */}
+           
             {data?.data?.length > 0 && (
                 <div className="py-6">
                     <Slider {...settings}>
