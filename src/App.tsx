@@ -18,7 +18,6 @@ import CartContextProvider from "./components/CartContext/CartContext";
 
 import Payment from "./components/Payment/Payment";
 
-// إنشاء التوجيهات (Routes)
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,7 +38,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-// إنشاء كائن `QueryClient` للاستخدام مع React Query
 const queryClient = new QueryClient();
 
 const App = () => {
