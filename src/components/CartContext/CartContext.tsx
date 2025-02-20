@@ -30,7 +30,7 @@ const CartContextProvider = ({ children }) => {
           totalPrice: data.data.totalCartPrice,
         },
       });
-      setCartId(data?.data?._id); // تم تصحيح هذه السطر
+      setCartId(data?.data?._id); 
     } catch (error) {
       console.error("Error fetching cart:", error);
     }
