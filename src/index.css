@@ -1,0 +1,33 @@
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    body {
+        background-image: url(./assets/imges/light-patten-DfaqEfwF.svg);
+    }
+    
+    @keyframes glow {
+        0% {
+            text-shadow: 0 0 5px rgba(79, 169, 77, 0.2);
+            opacity: 0.3;
+        }
+        50% {
+            text-shadow: 0 0 30px rgba(79, 169, 77, 1), 0 0 50px rgba(79, 169, 77, 0.9);
+            opacity: 1;
+        }
+        100% {
+            text-shadow: 0 0 5px rgba(79, 169, 77, 0.2);
+            opacity: 0.3;
+        }
+    }
+    
+    .loading-icon {
+        font-size: 100px;
+        /* زودت الحجم شوية */
+        color: #4fa94d;
+        animation: glow 1.5s infinite ease-in-out;
+    }
+    
+    .slick-prev:before,
+    .slick-next:before {
+        color: gray !important;
+    }
